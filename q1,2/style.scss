@@ -1,0 +1,55 @@
+@import "./_mixin.scss";
+@import "./_color.scss";
+@import "./_variables.scss";
+
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+
+    .container {
+        @include display(row);
+        color: $color-white;
+        height: 100vh;
+        width: 100vw;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+.leftSide {
+    @include display(column);
+    @include leftPart(column);
+    background-color: $bg-leftSide;
+    text-decoration-color: $text-color;
+    text-emphasis-color: $text-color;
+    margin-left: 300px;
+    display: flex;
+    align-items:flex-start;
+    width: 50%;
+
+}
+
+.rightSide {
+    @include display(column);
+    @include rightPart(column);
+    text-decoration-color: $text-color-right;
+    align-items: flex-end;
+    width: 50% ;
+    
+
+
+}
+
+.button {
+    padding-right: $paddingR;
+    padding-left: $paddingL;
+}
+
+.message {
+    padding-top: $paddingL;
+}
